@@ -82,7 +82,7 @@
 	<div class="container mx-auto px-4 sm:px-6 lg:px-8">
 		<h2 class="mb-8 text-3xl font-bold text-gray-800">Government Jobs</h2>
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-			{#each governmentJobs as job}
+			{#each governmentJobs as job (job.id)}
 				<JobCard title={job.title} department={job.department} icon={job.icon} />
 			{/each}
 		</div>
@@ -100,7 +100,7 @@
 	<div class="container mx-auto px-4 sm:px-6 lg:px-8">
 		<h2 class="mb-8 text-3xl font-bold text-gray-800">University & Other Exams</h2>
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-			{#each exams as exam}
+			{#each exams as exam (exam.id)}
 				<ExamCard title={exam.title} body={exam.body} image={exam.image} />
 			{/each}
 		</div>
@@ -111,7 +111,7 @@
 	<div class="container mx-auto px-4 sm:px-6 lg:px-8">
 		<h2 class="mb-8 text-3xl font-bold text-gray-800">Notifications</h2>
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-			{#each notifications as notification}
+			{#each notifications as notification (notification.id)}
 				<NotificationCard
 					title={notification.title}
 					details={notification.details}
