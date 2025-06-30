@@ -5,6 +5,12 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit(), devtoolsJson()],
+	// server: {
+	// 	host: true,
+	// 	port: 5173,
+	// 	strictPort: true,
+	// 	allowedHosts: ['eef2-2409-40e5-11ff-db37-dd62-f6c-e81-35f5.ngrok-free.app']
+	// },
 	test: {
 		projects: [
 			{

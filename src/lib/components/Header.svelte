@@ -15,17 +15,17 @@
 							>Home</a
 						>
 						<a
-							href="/"
+							href="/jobs"
 							class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900"
 							>Jobs</a
 						>
 						<a
-							href="/"
+							href="/admit-card"
 							class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900"
 							>Admit Cards</a
 						>
 						<a
-							href="/"
+							href="/results"
 							class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900"
 							>Results</a
 						>
