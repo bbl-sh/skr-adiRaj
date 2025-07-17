@@ -4,7 +4,6 @@
 	import ExamCard from '$lib/components/ExamCard.svelte';
 	import NotificationCard from '$lib/components/NotificationCard.svelte';
 
-	// Icons for Job Cards
 	import { Briefcase, Building, Users, FileText, Globe } from 'lucide-svelte';
 
 	const governmentJobs = [
