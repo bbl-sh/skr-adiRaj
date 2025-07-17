@@ -1,5 +1,7 @@
 <script>
 	import { Menu, Search } from 'lucide-svelte';
+
+	let isMobileMenuOpen = $state(false);
 </script>
 
 <nav class="bg-white shadow-md">
@@ -61,12 +63,14 @@
 					>
 				</div>
 			</div>
+
 			<div class="-mr-2 flex md:hidden">
 				<button
+					onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
 					type="button"
 					class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100 focus:outline-none"
 					aria-controls="mobile-menu"
-					aria-expanded="false"
+					aria-expanded={isMobileMenuOpen}
 				>
 					<span class="sr-only">Open main menu</span>
 					<Menu />
@@ -74,4 +78,50 @@
 			</div>
 		</div>
 	</div>
+
+	{#if isMobileMenuOpen}
+		<div class="md:hidden" id="mobile-menu">
+			<div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+				<a
+					href="/"
+					class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900"
+					>Home</a
+				>
+				<a
+					href="/jobs"
+					class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900"
+					>Jobs</a
+				>
+				<a
+					href="/admit-card"
+					class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900"
+					>Admit Cards</a
+				>
+				<a
+					href="/results"
+					class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900"
+					>Results</a
+				>
+				<a
+					href="/"
+					class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900"
+					>Notifications</a
+				>
+			</div>
+			<div class="border-t border-gray-200 px-2 pt-4 pb-3">
+				<div class="flex items-center justify-around">
+					<a
+						href="/"
+						class="w-full rounded-md border border-transparent bg-blue-600 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-700"
+						>Sign Up</a
+					>
+					<a
+						href="/"
+						class="ml-2 w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-center text-sm font-medium text-gray-700 hover:bg-gray-50"
+						>Login</a
+					>
+				</div>
+			</div>
+		</div>
+	{/if}
 </nav>

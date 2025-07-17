@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
 
-	import Header from '$lib/components/Header.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
 	let { children } = $props();
@@ -11,7 +11,7 @@
 	<title>Adi-Raj</title>
 </svelte:head>
 <div class="flex min-h-screen flex-col bg-gray-50">
-	<Header />
+	<Navbar />
 	<main class="flex-grow">
 		{@render children()}
 	</main>
